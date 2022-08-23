@@ -1,7 +1,8 @@
 
 
 let getComputerChoice = () => {
-    let choice =Math.floor(Math.random() )*3;
+    let choice = Math.floor((Math.random()*3));
+    console.log(choice)
     if (choice===0) {
         return "Rock";
     }
@@ -15,9 +16,9 @@ let getComputerChoice = () => {
 };
 
 
-let playRound= (playerSection, computerSection) => {
+let playRound= () => {
     let playerSection= prompt("Pick Rock Paper Scissor");
-    let computerSection= getComputerChoice();
+   let computerSection = getComputerChoice();
     if (playerSection===computerSection) {
         console.log("Its Tie!")
     }
@@ -34,7 +35,8 @@ let playRound= (playerSection, computerSection) => {
     {
         console.log("Player Wins!!")    }
 
-
+        console.log(playerSection)
+        console.log(computerSection);
 };
 
 let game = () => {
